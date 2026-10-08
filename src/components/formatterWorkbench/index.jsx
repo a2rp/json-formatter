@@ -87,7 +87,7 @@ const FormatterWorkbench = () => {
         link.href = objectUrl;
         link.download = "formatted.json";
         link.click();
-        URL.revokeObjectURL(objectUrl);
+        window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
         setResult({ kind: "success", message: "Downloaded formatted.json." });
     };
 
