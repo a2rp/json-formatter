@@ -1,0 +1,32 @@
+.pane {
+    display: flex;
+    min-width: 0;
+    min-height: 520px;
+    flex-direction: column;
+    border: 1px solid #2d3a46;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #151e27;
+
+    .paneHeader { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 17px; border-bottom: 1px solid #2d3a46; background: #1a242e; }
+    .paneTitle { display: flex; align-items: center; gap: 11px; }
+    .paneDot { width: 9px; height: 9px; border-radius: 50%; background: #e7b86b; box-shadow: 0 0 0 4px rgb(231 184 107 / 12%); }
+    h2 { color: #e7edf5; font-size: 13px; font-weight: 700; }
+    .paneTitle p { margin-top: 1px; color: #8190a0; font-size: 10px; }
+    .exampleButton { display: inline-flex; align-items: center; gap: 6px; min-height: 31px; padding: 0 9px; border: 1px solid #33414e; border-radius: 7px; color: #aebcca; background: #202b36; font-size: 10px; font-weight: 650; }
+    .exampleButton svg { width: 13px; height: 13px; }
+    .exampleButton:hover { border-color: #60736d; box-shadow: 0 0 0 2px rgb(167 223 130 / 8%); }
+    .editorLabel { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .editor { width: 100%; min-height: 0; flex: 1; padding: 20px; border: 0; outline: 0; color: #dce5ef; background: transparent; font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: 12px; line-height: 1.8; tab-size: 2; white-space: pre; overflow: auto; resize: none; }
+    .editor:focus-visible { box-shadow: inset 0 0 0 2px rgb(167 223 130 / 25%); }
+    .editor::placeholder { color: #637382; }
+    .paneFooter { display: flex; justify-content: space-between; gap: 10px; padding: 10px 16px; border-top: 1px solid #2b3742; color: #778796; background: #18212a; font-size: 10px; }
+
+    @media (max-width: 800px) { min-height: 380px; }
+    @media (max-width: 520px) {
+        min-height: 340px;
+        .paneHeader { padding: 11px 12px; }
+        .editor { padding: 15px 13px; font-size: 11px; }
+        .paneFooter { padding: 9px 12px; font-size: 9px; }
+    }
+}
