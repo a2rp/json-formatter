@@ -1,1 +1,63 @@
-﻿.appShell { display: grid; min-height: 100vh; place-content: center; color: var(--ink); }
+.appShell {
+    min-height: 100vh;
+    padding-top: 68px;
+    overflow: clip;
+
+    .hero { position: relative; padding: 70px 24px 22px; border-bottom: 1px solid #2a3742; background: radial-gradient(ellipse at 79% 35%, rgb(70 99 69 / 17%), transparent 35%), #111820; }
+    .heroInner { display: grid; max-width: 1320px; grid-template-columns: 1fr 0.78fr; align-items: center; gap: 70px; margin: 0 auto; }
+    .heroCopy { max-width: 650px; }
+    .heroLabel { display: flex; align-items: center; gap: 8px; margin-bottom: 18px; color: #b0dc93; font-size: 10px; font-weight: 750; letter-spacing: 0.13em; text-transform: uppercase; }
+    .heroLabel svg { width: 15px; height: 15px; }
+    h1 { color: #f0f5f9; font-size: clamp(40px, 5.5vw, 67px); font-weight: 740; letter-spacing: -0.06em; line-height: 1.03; }
+    h1 span { color: #a7df82; }
+    .heroDescription { max-width: 550px; margin-top: 20px; color: #9aa8b5; font-size: 14px; line-height: 1.75; }
+    .heroButton { display: inline-flex; align-items: center; gap: 10px; margin-top: 23px; padding: 11px 15px; border: 1px solid #a7df82; border-radius: 8px; color: #172118; background: #a7df82; font-size: 12px; font-weight: 750; transition: border-color 150ms ease, box-shadow 150ms ease; }
+    .heroButton svg { width: 15px; height: 15px; }
+    .heroButton:hover { border-color: #d3f1bf; box-shadow: 0 0 0 4px rgb(167 223 130 / 14%); }
+    .trustNote { display: flex; align-items: center; gap: 7px; margin-top: 23px; color: #849493; font-size: 10px; }
+    .trustNote svg { width: 14px; height: 14px; color: #8fbd79; }
+    .previewCard { justify-self: end; width: min(100%, 430px); border: 1px solid #36434d; border-radius: 13px; overflow: hidden; background: #151e27; box-shadow: 0 25px 70px rgb(0 0 0 / 25%); }
+    .previewHeader { display: flex; min-height: 43px; align-items: center; justify-content: space-between; padding: 0 14px; border-bottom: 1px solid #2d3a46; color: #8d9aa7; background: #1a242e; font-size: 9px; }
+    .windowDots { display: flex; gap: 4px; }
+    .windowDots i { width: 7px; height: 7px; border-radius: 50%; background: #687682; }
+    .windowDots i:first-child { background: #dc817a; }
+    .windowDots i:nth-child(2) { background: #d5b06f; }
+    .windowDots i:nth-child(3) { background: #88c47a; }
+    .previewValid { display: inline-flex; align-items: center; gap: 4px; color: #9dcc85; }
+    .previewValid svg { width: 11px; height: 11px; }
+    .previewCode { padding: 20px 0; font-family: ui-monospace, Consolas, monospace; font-size: 11px; line-height: 2.1; }
+    .previewCode p { display: grid; grid-template-columns: 40px 1fr; color: #c4d0dc; }
+    .previewCode p > span { padding-right: 14px; color: #5e6b78; text-align: right; }
+    .previewCode code { font: inherit; }
+    .previewCode b, .previewCode strong { color: #9caab7; font-weight: 500; }
+    .previewCode em { color: #91c9ff; font-style: normal; }
+    .previewCode i { color: #b9dc8f; font-style: normal; }
+    .previewCode mark { color: #e9b774; background: transparent; }
+    .previewFooter { display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #2d3a46; color: #73818f; background: #18212a; font-family: ui-monospace, Consolas, monospace; font-size: 8px; }
+    .heroBottom { display: flex; max-width: 1320px; justify-content: space-between; margin: 55px auto 0; padding-top: 14px; border-top: 1px solid #293541; color: #738393; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; }
+    .heroBottom > span:last-child { display: inline-flex; align-items: center; gap: 8px; }
+    .heroBottom i { width: 4px; height: 4px; border-radius: 50%; background: #a7df82; }
+
+    .guide { padding: 44px max(24px, calc((100vw - 1320px) / 2)) 66px; border-top: 1px solid #27343f; background: #151e27; }
+    .guideHeading p { margin-bottom: 5px; color: #a7df82; font-size: 9px; font-weight: 750; letter-spacing: 0.12em; text-transform: uppercase; }
+    .guideHeading h2 { color: #e6edf4; font-size: clamp(21px, 3vw, 27px); font-weight: 720; letter-spacing: -0.04em; }
+    .guideCards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 23px; }
+    .guideCards article { display: grid; grid-template-columns: 32px 1fr; gap: 12px; padding: 16px; border: 1px solid #2d3a46; border-radius: 10px; background: #19232d; }
+    .guideNumber { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid #405145; border-radius: 7px; color: #a7d28b; background: #202c24; font-family: ui-monospace, Consolas, monospace; font-size: 9px; }
+    .guideCards h3 { color: #dbe4ec; font-size: 12px; font-weight: 700; }
+    .guideCards p { margin-top: 6px; color: #8d9ba9; font-size: 10px; line-height: 1.65; }
+
+    @media (max-width: 900px) {
+        .heroInner { grid-template-columns: 1fr 0.85fr; gap: 35px; }
+        .guideCards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+        padding-top: 62px;
+        .hero { padding: 45px 16px 19px; }
+        .heroInner { grid-template-columns: 1fr; gap: 31px; }
+        h1 { font-size: clamp(40px, 11vw, 54px); }
+        .previewCard { width: 100%; }
+        .heroBottom { margin-top: 37px; font-size: 8px; }
+        .guide { padding: 37px 16px 48px; }
+    }
+}
