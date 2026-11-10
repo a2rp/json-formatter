@@ -30,7 +30,7 @@ Choose **Clear** to open a confirmation dialog before removing the input and res
 
 All parsing and formatting run in the current browser page. Input is not uploaded, written to local storage, or retained after a refresh or when the page is closed. Copying uses the browser clipboard API and may require a secure page context. Downloads are created locally as formatted.json.
 
-The tool validates JSON syntax only. It does not validate an API schema or business rules. Standard JSON does not allow comments, trailing commas, single-quoted strings, or undefined values. Very large documents may be limited by the available memory and performance of the browser.
+The tool validates JSON syntax only. It does not validate an API schema or business rules. Standard JSON does not allow comments, trailing commas, single-quoted strings, or undefined values. Number tokens are preserved as written, including large integers and high-precision decimals. Very large documents may be limited by the available memory and performance of the browser.
 
 ## Run locally
 

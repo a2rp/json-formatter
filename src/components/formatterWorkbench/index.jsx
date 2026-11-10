@@ -40,6 +40,7 @@ const FormatterWorkbench = () => {
     };
 
     const runAction = (action) => {
+        setCopyState("idle");
         if (!input.trim()) {
             setOutput("");
             setResult({ kind: "error", message: "Enter JSON before running this action." });
